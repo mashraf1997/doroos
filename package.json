@@ -1,0 +1,15 @@
+{
+  "name": "doroos",
+  "version": "0.1.0",
+  "description": "Open-source platform to sell your own online courses. Course pages, student accounts, a lesson player with progress, card payments (Stripe) or manual transfers, coupons, and YouTube, Vimeo, Bunny or uploaded videos. No dependencies.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": { "node": ">=20" },
+  "license": "MIT",
+  "keywords": ["lms", "online-courses", "e-learning", "course-platform", "teachable-alternative", "stripe", "self-hosted", "arabic"]
+}

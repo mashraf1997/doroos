@@ -1,0 +1,20 @@
+# One-click deploy on a Hostinger VPS (Docker Manager), or anywhere with Docker:
+#   docker compose up -d
+# Then open http://YOUR-SERVER-IP/admin and create your password.
+services:
+  doroos:
+    image: ghcr.io/mashraf1997/doroos:latest
+    container_name: doroos
+    restart: unless-stopped
+    ports:
+      - "80:3000"
+    environment:
+      - NODE_ENV=production
+      - SETUP_TOKEN=${SETUP_TOKEN:-}
+      - DEMO_MODE=${DEMO_MODE:-false}
+      - MAX_VIDEO_MB=${MAX_VIDEO_MB:-2048}
+    volumes:
+      - doroos-data:/data
+
+volumes:
+  doroos-data:
